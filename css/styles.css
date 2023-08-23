@@ -18,7 +18,7 @@ body {
     color: white;
     height: 100%;
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
     "header header header"
     "main main main"
     "footer footer footer"
@@ -31,17 +31,16 @@ body {
     display: flex;
     grid-area: main;
     position: relative;
-    top: 2rem;
-    bottom: 2rem;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
 }
 
 #main2{
     display: flex;
     grid-area: main;
     position: relative;
-    top: 2rem;
     justify-content: space-around;
     align-items: center;
 }
@@ -66,7 +65,7 @@ header{
 
 nav {
     display: flex;
-    height: 50px;
+    height: 3.2rem;
     width: 100%;
     align-items: center;
     flex-direction: row;
@@ -98,16 +97,20 @@ nav {
 .topMenu {
     margin-right: 10px;
     padding: 0;
+    margin: 0;
     display: flex;
+}
+
+.ropdown{
+    color: red;
 }
 
 /* Footer part*/
 
-footer {
+.mainFooter {
     display: flex;
     grid-area: footer;
     z-index: 1;
-    padding: 3px;
     height: 30px;
     text-align: center;
     background-color: #010a18;
@@ -121,10 +124,13 @@ footer {
 .footerCopy{
     color: #808080;
     font-size: 1rem;
+    margin: 0;
 }
 
 .footerBottomMenu{
     display: flex;
+    margin: 0;
+    padding: 0;
     height: 2rem;
     align-items: center;
 }
@@ -132,11 +138,13 @@ footer {
 .footerLi{
     display: flex;
     list-style: none;
+    padding: 0 0.4rem;
     float: left;
-    margin: 8px;
-    height: 2rem;
-    width: 100%;
     align-items: center;
+}
+
+.footerA{
+    display: flex;
 }
 
 .footerLogo{
@@ -146,10 +154,22 @@ footer {
 
 /* index.html */
 
-.profileInfo, .skills{
+.profileInfo{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-top: 3rem;
+}
+
+.skills{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: linear-gradient(#1a1e22, #1a1e22) padding-box,
+    linear-gradient( #94DDBC 5%, #188FA7) border-box;
+    border-radius: 20px;
+    border: 3px solid transparent;
+    width: 20rem;
 }
 
 .profilePicture{
@@ -159,26 +179,27 @@ footer {
     border: 4px solid transparent;
     width: 15rem;
     height: 15rem;
-    margin-bottom: 10px;
+    margin: 2rem 0;
 }
 
 .profileName{
     color: #FFFFFF;
     font-family: 'roboto', sans-serif ;
-    margin: 20px 0;
-    font-size: 2rem;
+    font-size: 4rem;
+    margin: 0;
 }
 .skillsTitle{
-    margin-bottom: 1.5rem;
+    margin: 1.3rem 0;
+    border-bottom: 3px solid #f44336;
 }
-.container {
-    width: 18rem; 
-    background-color: #dddddd; 
+.skillsContainer {
+    width: 18rem;
+    background-color: #dddddd;
     margin-bottom: 10px;
     border-radius: 20px;
 }
 .theSkills {
-    text-align: right; 
+    text-align: right;
     padding: 10px;
     color: white;
     border-radius: 20px;
@@ -186,15 +207,15 @@ footer {
 .python {
     width: 90%;
     background-color: #04AA6D;
-} 
+}
 .css {
     background-color: #2196F3;
     width: 60%;
-} 
+}
 .html {
     background-color: #f44336;
     width: 50%;
-} 
+}
 
 /* about.html */
 
@@ -247,6 +268,8 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0;
+    padding: 0;
     justify-content: center;
     background: linear-gradient(#1a1e22, #1a1e22) padding-box,
     linear-gradient( #94DDBC 5%, #188FA7) border-box;
@@ -273,6 +296,7 @@ footer {
     text-align: center;
     font-size: 3.5rem;
     padding-bottom: 2rem;
+    margin: 0;
 }
 
 .contactForm{
@@ -353,7 +377,7 @@ footer {
     position: relative;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+
 }
 
 .servicesTitle{
@@ -361,6 +385,7 @@ footer {
     position: relative;
     text-align: center;
     padding: 3rem 0;
+    margin: 0;
     font-size: 5rem;
 }
 
