@@ -1,6 +1,5 @@
 /* Google-fonts import*/
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 /* Used in all files part*/
 
 *{
@@ -13,7 +12,7 @@ html{
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #232C33;
     color: white;
     height: 100%;
@@ -312,6 +311,29 @@ nav {
 .mainForm{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 12rem;
+}
+
+.formInput{
+    background-color: #1a1e22;
+    color: #FFFFFF;
+    border-radius: 5px;
+    width: 12rem;
+}
+
+.formLabel{
+    text-align: center;
+}
+
+.formSubmit{
+    margin-top: 1rem;
+    width: 5rem;
+    color: #FFFFFF;
+    background: linear-gradient(#1a1e22, #1a1e22) padding-box,
+    linear-gradient( #94DDBC 5%, #188FA7) border-box;
+    border-radius: 20px;
+    border: 3px solid transparent;
 }
 
 /* Portfolio.html only */
