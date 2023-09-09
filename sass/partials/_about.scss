@@ -1,0 +1,41 @@
+@use '../variables/colors';
+
+@mixin sAbout() {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;   
+}
+
+@mixin sAboutName(){
+    font-size: 3rem;
+    max-width: 470px;
+    min-width: 0;
+    margin: 1.5rem 0;
+}
+
+@mixin sAboutInfo() {
+    font-size: 1.5rem;
+    padding: 10px;
+    max-width: 550px;
+    min-width: 0;
+    background: linear-gradient(colors.$elements1, colors.$elements1) padding-box,
+    linear-gradient( colors.$linear1 5%, colors.$linear2) border-box;
+    border-radius: 20px;
+    border: 3px solid transparent;
+}
+
+@mixin sAboutText1(){
+    &::after{
+        content: "\a";
+        white-space: pre;
+    }
+}
+
+@mixin sAboutText2(){
+    &::before{
+        content: "\a";
+        white-space: pre;
+    }
+}

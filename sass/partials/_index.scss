@@ -1,0 +1,104 @@
+@use '../variables/colors';
+
+@keyframes transitionPython{
+    from{
+        width: 20%;
+    }
+
+    to {
+        width: 90%;
+    }
+}
+
+@keyframes transitionHtml{
+    from{
+        width: 20%;
+    }
+
+    to {
+        width: 50%;
+    }
+}
+
+@keyframes transitionCss{
+    from{
+        width: 20%;
+    }
+
+    to {
+        width: 60%;
+    }
+}
+
+@mixin sProfileInfo(){
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-top: 3rem;
+}
+
+@mixin sProfilePicture(){
+    border-radius: 50%;
+    background: linear-gradient(#1a1e22, #1a1e22) padding-box,
+    linear-gradient(colors.$linear1 5%, colors.$linear2) border-box;
+    border: 4px solid transparent;
+    width: 15rem;
+    height: 15rem;
+    margin: 2rem 0;
+}
+
+@mixin sProfileName() {
+    color: #FFFFFF;
+    font-family: 'roboto', sans-serif ;
+    font-size: 4rem;
+    margin: 0;
+    text-align: center;
+}
+
+@mixin sSkills() {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(#1a1e22, #1a1e22) padding-box,
+    linear-gradient(colors.$linear1 5%, colors.$linear2) border-box;
+    border-radius: 20px;
+    border: 3px solid transparent;
+    width: 20rem;
+}
+
+@mixin sSkillsTitle(){
+    margin: 1.3rem 0;
+    border-bottom: 3px solid #f44336;
+}
+
+@mixin sSkillsContainer() {
+    width: 18rem;
+    background-color: #dddddd;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+
+@mixin sTheSkills() {
+    text-align: right;
+    padding: 10px;
+    color: white;
+    border-radius: 20px;
+}
+
+@mixin sPython() {
+    animation: transitionPython 2.5s;
+    width: 90%;
+    background-color: #04AA6D;
+}
+
+@mixin sCss() {
+    animation: transitionCss 2.5s;
+    background-color: #2196F3;
+    width: 60%;
+}
+
+@mixin sHtml(){
+    animation: transitionHtml 2.5s;
+    background-color: #f44336;
+    width: 50%;
+}

@@ -1,0 +1,49 @@
+@use '../variables/colors';
+
+@mixin sServices(){
+    display:flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+@mixin sServicesTitle(){
+    display: flex;
+    position: relative;
+    text-align: center;
+    padding: 3rem 0;
+    margin: 0;
+    font-size: 5rem;
+}
+
+@mixin sServiceContainer(){
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    margin-bottom: 3rem;
+    height: auto;
+    display: flex;
+    align-items: center;
+    background-color: colors.$elements1;
+    border-radius: 20px;
+}
+
+@mixin sService(){
+    height: 20rem;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem 0;
+    justify-content: center;
+    background: linear-gradient(colors.$articleColor, colors.$articleColor) padding-box,
+    linear-gradient(colors.$linear1 5%, colors.$linear2) border-box;
+    border-radius: 50%;
+    border: 3px solid transparent;
+}
+
+@mixin sServiceTitle(){
+    font-size: 3rem;
+    border-bottom: 2px solid #f44336;
+}

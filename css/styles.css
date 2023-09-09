@@ -1,472 +1,469 @@
-/* Google-fonts import*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-/* Used in all files part*/
-
-*{
-    margin: 0;
-    padding: 0;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@keyframes transitionPython {
+  from {
+    width: 20%;
+  }
+  to {
+    width: 90%;
+  }
+}
+@keyframes transitionHtml {
+  from {
+    width: 20%;
+  }
+  to {
+    width: 50%;
+  }
+}
+@keyframes transitionCss {
+  from {
+    width: 20%;
+  }
+  to {
+    width: 60%;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
 }
 
-html{
-    height: 100%;
+html {
+  height: 100%;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #232C33;
-    color: white;
-    height: 100%;
-    display: grid;
-    grid-template-areas:
-    "header header header"
-    "main main main"
-    "footer footer footer"
-    ;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto;
+  font-family: "Roboto", sans-serif;
+  background-color: #232C33;
+  color: white;
+  height: 100%;
+  display: grid;
+  grid-template-areas: "header header header" "main main main" "footer footer footer";
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
 }
-
-#normalMain{
-    display: flex;
-    grid-area: main;
-    position: relative;
+body header {
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  grid-area: header;
+  width: 100%;
+}
+body header nav {
+  display: flex;
+  height: 3.2rem;
+  width: 100%;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  /* shadow and gradient */
+  background-image: linear-gradient(#94DDBC 5%, #188FA7);
+  box-shadow: 0px 5px 30px 1px #188FA7;
+}
+body header nav .logo {
+  height: 35px;
+  margin: 10px;
+}
+body header nav .topMenu {
+  margin-right: 10px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+@media screen and (max-width: 520px) {
+  body header nav .topMenu {
+    display: none;
+  }
+}
+body header nav .topMenu .navLi {
+  float: left;
+  padding: 5px;
+  list-style-type: none;
+}
+body header nav .topMenu .navLi .navLink {
+  color: #000000;
+  text-align: center;
+  text-decoration: none;
+  padding: 1px 1px;
+  font-size: 1rem;
+}
+@media screen and (min-width: 521px) {
+  body header nav .ropdown {
+    display: none;
+  }
+}
+body #normalMain {
+  display: flex;
+  grid-area: main;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+}
+body #normalMain .profileInfo {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  padding-top: 3rem;
+}
+body #normalMain .profileInfo .profilePicture {
+  border-radius: 50%;
+  background: linear-gradient(#1a1e22, #1a1e22) padding-box, linear-gradient(#94DDBC 5%, #188FA7) border-box;
+  border: 4px solid transparent;
+  width: 15rem;
+  height: 15rem;
+  margin: 2rem 0;
+}
+body #normalMain .profileInfo .profileName {
+  color: #FFFFFF;
+  font-family: "roboto", sans-serif;
+  font-size: 4rem;
+  margin: 0;
+  text-align: center;
+}
+body #normalMain .skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(#1a1e22, #1a1e22) padding-box, linear-gradient(#94DDBC 5%, #188FA7) border-box;
+  border-radius: 20px;
+  border: 3px solid transparent;
+  width: 20rem;
+}
+body #normalMain .skills .skillsTitle {
+  margin: 1.3rem 0;
+  border-bottom: 3px solid #f44336;
+}
+body #normalMain .skills .skillsContainer {
+  width: 18rem;
+  background-color: #dddddd;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
+body #normalMain .skills .skillsContainer .theSkills {
+  text-align: right;
+  padding: 10px;
+  color: white;
+  border-radius: 20px;
+}
+body #normalMain .skills .skillsContainer .python {
+  animation: transitionPython 2.5s;
+  width: 90%;
+  background-color: #04AA6D;
+}
+body #normalMain .skills .skillsContainer .css {
+  animation: transitionCss 2.5s;
+  background-color: #2196F3;
+  width: 60%;
+}
+body #normalMain .skills .skillsContainer .html {
+  animation: transitionHtml 2.5s;
+  background-color: #f44336;
+  width: 50%;
+}
+body #normalMain .about {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+body #normalMain .about .aboutName {
+  font-size: 3rem;
+  max-width: 470px;
+  min-width: 0;
+  margin: 1.5rem 0;
+}
+body #normalMain .about .aboutInfo {
+  font-size: 1.5rem;
+  padding: 10px;
+  max-width: 550px;
+  min-width: 0;
+  background: linear-gradient(#1a1e22, #1a1e22) padding-box, linear-gradient(#94DDBC 5%, #188FA7) border-box;
+  border-radius: 20px;
+  border: 3px solid transparent;
+}
+body #normalMain .about .aboutInfo #aboutText1::after {
+  content: "\a";
+  white-space: pre;
+}
+body #normalMain .about .aboutInfo #aboutText2::before {
+  content: "\a";
+  white-space: pre;
+}
+body #normalMain #gallery1 {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+body #normalMain #gallery1 .galleryTitle {
+  display: flex;
+  position: relative;
+  text-align: center;
+  margin: 1.5rem 0;
+  font-size: 2rem;
+}
+body #normalMain #gallery1 .galleryContainer {
+  display: flex;
+  width: 70%;
+  height: auto;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-around;
+  background-color: #1a1e22;
+  border-radius: 15px;
+}
+body #normalMain #gallery1 .galleryContainer .article {
+  height: 13rem;
+  width: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#232C33, #232C33) padding-box, linear-gradient(#94DDBC 5%, #188FA7) border-box;
+  border-radius: 20px;
+  border: 3px solid transparent;
+}
+@media screen and (max-width: 520px) {
+  body #normalMain #gallery1 .galleryContainer .article {
+    margin: 1rem 0;
+  }
+}
+body #normalMain #gallery1 .galleryContainer .article .articleLogo {
+  height: 3.5rem;
+  margin-bottom: 1rem;
+}
+body #normalMain #gallery1 .galleryContainer .article .articleTitle {
+  font-size: 2rem;
+  border-bottom: 2px solid #f44336;
+}
+body #normalMain #other {
+  margin-bottom: 3rem;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+body #normalMain #other .galleryTitle {
+  display: flex;
+  position: relative;
+  text-align: center;
+  margin: 1.5rem 0;
+  font-size: 2rem;
+}
+body #normalMain #other .galleryContainer {
+  display: flex;
+  width: 70%;
+  height: auto;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-around;
+  background-color: #1a1e22;
+  border-radius: 15px;
+}
+body #normalMain #other .galleryContainer .article {
+  height: 13rem;
+  width: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#232C33, #232C33) padding-box, linear-gradient(#94DDBC 5%, #188FA7) border-box;
+  border-radius: 20px;
+  border: 3px solid transparent;
+}
+@media screen and (max-width: 520px) {
+  body #normalMain #other .galleryContainer .article {
+    margin: 1rem 0;
+  }
+}
+body #normalMain #other .galleryContainer .article .articleLogo {
+  height: 3.5rem;
+  margin-bottom: 1rem;
+}
+body #normalMain #other .galleryContainer .article .articleTitle {
+  font-size: 2rem;
+  border-bottom: 2px solid #f44336;
+}
+body #normalMain #services {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+}
+body #normalMain #services .servicesTitle {
+  display: flex;
+  position: relative;
+  text-align: center;
+  padding: 3rem 0;
+  margin: 0;
+  font-size: 5rem;
+}
+body #normalMain #services .serviceContainer {
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+  margin-bottom: 3rem;
+  height: auto;
+  display: flex;
+  align-items: center;
+  background-color: #1a1e22;
+  border-radius: 20px;
+}
+body #normalMain #services .serviceContainer .service {
+  height: 20rem;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5rem 0;
+  justify-content: center;
+  background: linear-gradient(#232C33, #232C33) padding-box, linear-gradient(#94DDBC 5%, #188FA7) border-box;
+  border-radius: 50%;
+  border: 3px solid transparent;
+}
+body #normalMain #services .serviceContainer .service .serviceTitle {
+  font-size: 3rem;
+  border-bottom: 2px solid #f44336;
+}
+body #main2 {
+  display: flex;
+  grid-area: main;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+}
+@media screen and (max-width: 520px) {
+  body #main2 {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 3rem 0;
+    padding: 3.5rem 0;
+  }
+}
+body #main2 .contactOne {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  scale: 140%;
+  justify-content: center;
+  align-items: center;
+}
+body #main2 .contactOne .contactTitle {
+  text-align: center;
+  font-size: 3.5rem;
+  padding-bottom: 2rem;
+  margin: 0;
+}
+body #main2 .contactOne .contactMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 20rem;
+  justify-content: center;
+  background: linear-gradient(#1a1e22, #1a1e22) padding-box, linear-gradient(#94DDBC 5%, #188FA7) border-box;
+  border-radius: 20px;
+  border: 3px solid transparent;
+}
+body #main2 .contactOne .contactMenu .contactLi {
+  display: flex;
+  list-style: none;
+  height: 2rem;
+  width: 100%;
+  align-items: center;
+  padding: 4rem;
+  justify-content: center;
+}
+body #main2 .contactOne .contactMenu .contactLi .contactLogo {
+  height: 5rem;
+  width: 5rem;
+}
+body #main2 .contactForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+  height: 100%;
+  justify-content: center;
+}
+body #main2 .contactForm .mainForm {
+  display: flex;
+  scale: 130%;
+  flex-direction: column;
+  align-items: center;
+  width: 12rem;
+}
+body #main2 .contactForm .mainForm .formLabel {
+  text-align: center;
+}
+body #main2 .contactForm .mainForm .formInput {
+  background-color: #1a1e22;
+  color: #FFFFFF;
+  border-radius: 5px;
+  width: 12rem;
+}
+body #main2 .contactForm .mainForm .formSubmit {
+  margin-top: 1rem;
+  width: 5rem;
+  color: #FFFFFF;
+  background: linear-gradient(#1a1e22, #1a1e22) padding-box, linear-gradient(#94DDBC 5%, #188FA7) border-box;
+  border-radius: 20px;
+  border: 3px solid transparent;
+}
+body .mainFooter {
+  display: flex;
+  grid-area: footer;
+  z-index: 1;
+  text-align: center;
+  background-color: #010a18;
+  box-shadow: 0px 5px 30px 1px #808080;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  align-self: flex-end;
+}
+@media screen and (max-width: 520px) {
+  body .mainFooter {
+    height: 60px;
+  }
+}
+@media screen and (min-width: 521px) {
+  body .mainFooter {
+    height: 30px;
+  }
+}
+body .mainFooter .footerCopy {
+  color: #808080;
+  font-size: 1rem;
+  margin: 0;
+}
+body .mainFooter .footerBottomMenu {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: 2rem;
+  align-items: center;
+}
+body .mainFooter .footerBottomMenu .footerLi {
+  display: flex;
+  list-style: none;
+  padding: 0 0.4rem;
+  float: left;
+  align-items: center;
+}
+body .mainFooter .footerBottomMenu .footerLi .footerA {
+  display: flex;
+}
+body .mainFooter .footerBottomMenu .footerLi .footerA .footerLogo {
+  height: 1.4rem;
+  width: 1.4rem;
 }
 
-#main2{
-    display: flex;
-    grid-area: main;
-    position: relative;
-    justify-content: space-around;
-    align-items: center;
-}
-
-
-/* colors list:
-Main background: #232C33
-linear Gradient: #94DDBC & #188FA7
-footer background: #010a18
-elements: #1a1e22 */
-
-
-/* Nav part*/
-
-header{
-    display: flex;
-    position: fixed;
-    z-index: 1;
-    grid-area: header;
-    width: 100%;
-}
-
-nav {
-    display: flex;
-    height: 3.2rem;
-    width: 100%;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    /* shadow and gradient */
-    background-image: linear-gradient(#94DDBC 5%, #188FA7);
-    box-shadow: 0px 5px 30px 1px #188FA7;
-}
-
-.navLi {
-    float: left;
-    padding: 5px;
-    list-style-type: none;
-}
-
-.navLink {
-    color: #000000;
-    text-align: center;
-    text-decoration: none;
-    padding: 1px 1px;
-    font-size: 1rem;
-}
-
-.logo {
-    height: 35px;
-    margin: 10px;
-}
-
-.topMenu {
-    margin-right: 10px;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-.ropdown{
-    color: red;
-}
-
-/* Footer part*/
-
-.mainFooter {
-    display: flex;
-    grid-area: footer;
-    z-index: 1;
-    text-align: center;
-    background-color: #010a18;
-    box-shadow: 0px 5px 30px 1px #808080;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    align-self: flex-end;
-}
-
-.footerCopy{
-    color: #808080;
-    font-size: 1rem;
-    margin: 0;
-}
-
-.footerBottomMenu{
-    display: flex;
-    margin: 0;
-    padding: 0;
-    height: 2rem;
-    align-items: center;
-}
-
-.footerLi{
-    display: flex;
-    list-style: none;
-    padding: 0 0.4rem;
-    float: left;
-    align-items: center;
-}
-
-.footerA{
-    display: flex;
-}
-
-.footerLogo{
-    height: 1.4rem;
-    width: 1.4rem;
-}
-
-/* index.html */
-
-.profileInfo{
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    padding-top: 3rem;
-}
-
-.skills{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: linear-gradient(#1a1e22, #1a1e22) padding-box,
-    linear-gradient( #94DDBC 5%, #188FA7) border-box;
-    border-radius: 20px;
-    border: 3px solid transparent;
-    width: 20rem;
-}
-
-.profilePicture{
-    border-radius: 50%;
-    background: linear-gradient(#1a1e22, #1a1e22) padding-box,
-    linear-gradient( #94DDBC 5%, #188FA7) border-box;
-    border: 4px solid transparent;
-    width: 15rem;
-    height: 15rem;
-    margin: 2rem 0;
-}
-
-.profileName{
-    color: #FFFFFF;
-    font-family: 'roboto', sans-serif ;
-    font-size: 4rem;
-    margin: 0;
-    text-align: center;
-}
-.skillsTitle{
-    margin: 1.3rem 0;
-    border-bottom: 3px solid #f44336;
-}
-.skillsContainer {
-    width: 18rem;
-    background-color: #dddddd;
-    margin-bottom: 10px;
-    border-radius: 20px;
-}
-.theSkills {
-    text-align: right;
-    padding: 10px;
-    color: white;
-    border-radius: 20px;
-}
-.python {
-    width: 90%;
-    background-color: #04AA6D;
-}
-.css {
-    background-color: #2196F3;
-    width: 60%;
-}
-.html {
-    background-color: #f44336;
-    width: 50%;
-}
-
-/* about.html */
-
-.about{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-}
-
-.aboutName{
-    font-size: 3rem;
-    max-width: 470px;
-    min-width: 0;
-    margin: 1.5rem 0;
-}
-
-.aboutInfo{
-    font-size: 1.5rem;
-    padding: 10px;
-    max-width: 550px;
-    min-width: 0;
-    background: linear-gradient(#1a1e22, #1a1e22) padding-box,
-    linear-gradient( #94DDBC 5%, #188FA7) border-box;
-    border-radius: 20px;
-    border: 3px solid transparent;
-}
-
-#aboutText1::after{
-    content: "\a";
-    white-space: pre;
-}
-
-#aboutText2::before{
-    content: "\a";
-    white-space: pre;
-}
-
-/* contact.html only */
-
-.contactOne{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-}
-
-.contactMenu{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    width: 20rem;
-    justify-content: center;
-    background: linear-gradient(#1a1e22, #1a1e22) padding-box,
-    linear-gradient( #94DDBC 5%, #188FA7) border-box;
-    border-radius: 20px;
-    border: 3px solid transparent;
-}
-
-.contactLi{
-    display: flex;
-    list-style: none;
-    height: 2rem;
-    width: 100%;
-    align-items: center;
-    padding: 4rem;
-    justify-content: center;
-}
-
-.contactLogo{
-    height: 5rem;
-    width: 5rem;;
-}
-
-.contactTitle{
-    text-align: center;
-    font-size: 3.5rem;
-    padding-bottom: 2rem;
-    margin: 0;
-}
-
-.contactForm{
-    display: flex;
-    flex-direction: column;
-    max-width: 250px;
-    height: 100%;
-    justify-content: center;
-}
-
-.mainForm{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 12rem;
-}
-
-.formInput{
-    background-color: #1a1e22;
-    color: #FFFFFF;
-    border-radius: 5px;
-    width: 12rem;
-}
-
-.formLabel{
-    text-align: center;
-}
-
-.formSubmit{
-    margin-top: 1rem;
-    width: 5rem;
-    color: #FFFFFF;
-    background: linear-gradient(#1a1e22, #1a1e22) padding-box,
-    linear-gradient( #94DDBC 5%, #188FA7) border-box;
-    border-radius: 20px;
-    border: 3px solid transparent;
-}
-
-/* Portfolio.html only */
-
-#gallery1, #other{
-    display:flex;
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: auto;
-}
-
-#other{
-    margin-bottom: 3rem;
-}
-
-.galleryTitle{
-    display: flex;
-    position: relative;
-    text-align: center;
-    margin: 1.5rem 0;
-    font-size: 2rem;
-}
-
-.galleryContainer{
-    display: flex;
-    width: 70%;
-    height: auto;
-    flex-wrap:wrap;
-    padding: 0.5rem;
-    display: flex;
-    justify-content: space-around;
-    background-color: #1a1e22;
-    border-radius: 15px;
-}
-
-.article{
-    height: 13rem;
-    width: 8rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(#232C33, #232C33) padding-box,
-    linear-gradient( #94DDBC 5%, #188FA7) border-box;
-    border-radius: 20px;
-    border: 3px solid transparent;
-}
-
-.articleLogo{
-    height: 3.5rem;
-    margin-bottom: 1rem;
-}
-
-.articleTitle{
-    font-size: 2rem;
-    border-bottom: 2px solid #f44336;
-}
-
-/* Services.html only */
-
-#services{
-    display:flex;
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-
-}
-
-.servicesTitle{
-    display: flex;
-    position: relative;
-    text-align: center;
-    padding: 3rem 0;
-    margin: 0;
-    font-size: 5rem;
-}
-
-.serviceContainer{
-    display: flex;
-    flex-direction: column;
-    width: 25rem;
-    margin-bottom: 3rem;
-    height: auto;
-    display: flex;
-    align-items: center;
-    background-color: #1a1e22;
-    border-radius: 20px;
-}
-
-.service{
-    height: 20rem;
-    width: 20rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 5rem 0;
-    justify-content: center;
-    background: linear-gradient(#232C33, #232C33) padding-box,
-    linear-gradient( #94DDBC 5%, #188FA7) border-box;
-    border-radius: 50%;
-    border: 3px solid transparent;
-}
-
-.serviceTitle{
-    font-size: 3rem;
-    border-bottom: 2px solid #f44336;
-}
-
-/* media query main */
-
-@media (max-width: 520px){ /*mobile*/
-    .topMenu{
-        display: none;
-    }
-    .mainFooter{
-        height: 60px;
-    }
-    #main2{
-        flex-direction: column;
-        padding: 3.5rem 0;
-    }
-    .article{
-        margin: 1rem 0;
-    }
-}
-
-@media (min-width: 521px){ /*desktop*/
-    .ropdown{
-        display: none;
-    }
-    .mainFooter{
-        height: 30px;
-    }
-}
+/*# sourceMappingURL=styles.css.map */

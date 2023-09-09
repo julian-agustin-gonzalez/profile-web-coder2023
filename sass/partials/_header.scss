@@ -1,0 +1,50 @@
+@use '../variables/colors';
+
+@mixin sHeader(){
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    grid-area: header;
+    width: 100%;
+}
+
+@mixin sNav(){
+    display: flex;
+    height: 3.2rem;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    /* shadow and gradient */
+    background-image: linear-gradient(colors.$linear1 5%, colors.$linear2);
+    box-shadow: 0px 5px 30px 1px colors.$linear2;
+}
+
+@mixin sNavLi(){
+    float: left;
+    padding: 5px;
+    list-style-type: none;
+}
+
+@mixin sNavLink(){
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+    padding: 1px 1px;
+    font-size: 1rem;
+}
+
+@mixin sLogo(){
+    height: 35px;
+    margin: 10px;
+}
+
+@mixin sTopMenu(){
+    margin-right: 10px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    @include mobile(){
+        display: none;
+    }
+}

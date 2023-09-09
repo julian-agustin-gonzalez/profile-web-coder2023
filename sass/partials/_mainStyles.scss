@@ -1,0 +1,21 @@
+@mixin sNormalmain {
+    display: flex;
+    grid-area: main;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+}
+
+@mixin sMain2 {
+    display: flex;
+    grid-area: main;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    @include mobile(){
+        flex-direction: column;
+        padding: 3.5rem 0;
+    }
+}

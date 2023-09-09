@@ -1,0 +1,66 @@
+@use '../variables/colors';
+
+@mixin sGallery1 (){
+    display:flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+@mixin sOther{
+    margin-bottom: 3rem;
+    display:flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+@mixin sGalleryTitle(){
+    display: flex;
+    position: relative;
+    text-align: center;
+    margin: 1.5rem 0;
+    font-size: 2rem;
+}
+
+@mixin sGalleryContainer(){
+    display: flex;
+    width: 70%;
+    height: auto;
+    flex-wrap:wrap;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-around;
+    background-color: colors.$elements1;
+    border-radius: 15px;
+}
+
+@mixin sArticle(){
+    height: 13rem;
+    width: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(colors.$articleColor, colors.$articleColor) padding-box,
+    linear-gradient( colors.$linear1 5%, colors.$linear2) border-box;
+    border-radius: 20px;
+    border: 3px solid transparent;
+    @include mobile(){
+        margin: 1rem 0;
+    }
+}
+
+@mixin sArticleLogo(){
+    height: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+@mixin sArticleTitle(){
+    font-size: 2rem;
+    border-bottom: 2px solid #f44336;
+}

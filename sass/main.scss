@@ -1,0 +1,232 @@
+// media-queries import
+@import './variables/media-queries';
+
+// fonts import
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+// header import
+@import './partials/header';
+
+// footer import
+@import './partials/footer'; 
+
+// Main import
+@import './partials/mainStyles';
+
+// index import
+@import './partials/index';
+
+// about import
+@import './partials/about';
+
+// contact import
+@import './partials/contact';
+
+//portfolio import
+@import './partials/portfolio';
+
+//services import
+@import './partials/services';
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #232C33;
+    color: white;
+    height: 100%;
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    "main main main"
+    "footer footer footer"
+    ;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+
+    header {
+        @include sHeader();
+        nav {
+            @include sNav();
+            .logo {
+                @include sLogo();
+            }
+            .topMenu {
+                @include sTopMenu();
+                .navLi{
+                    @include sNavLi();
+                    .navLink{
+                        @include sNavLink();
+                    }
+                }
+            }
+            .ropdown{
+                @include desktop(){
+                    display: none;
+                }
+            }
+        }
+    }
+
+    #normalMain {
+        @include sNormalmain();
+        .profileInfo {
+            @include sProfileInfo();
+            .profilePicture {
+                @include sProfilePicture;
+            }
+            .profileName {
+                @include sProfileName;
+            }
+        }
+        .skills {
+            @include sSkills();
+            .skillsTitle {
+                @include sSkillsTitle();
+            }
+            .skillsContainer {
+                @include sSkillsContainer();
+                .theSkills{
+                    @include sTheSkills();
+                }
+                .python {
+                    @include sPython();
+                }
+                .css {
+                    @include sCss();
+                }
+                .html {
+                    @include sHtml();
+                }
+            }
+        }
+        .about {
+            @include sAbout();
+            .aboutName{
+                @include sAboutName();
+            }
+            .aboutInfo{
+                @include sAboutInfo();
+                #aboutText1{
+                    @include sAboutText1();
+                }
+                #aboutText2{
+                    @include sAboutText2();
+                }
+            }
+        }
+        #gallery1{
+            @include sGallery1();
+            .galleryTitle{
+                @include sGalleryTitle();
+            }
+            .galleryContainer{
+                @include sGalleryContainer();
+                .article{
+                    @include sArticle();
+                    .articleLogo{
+                        @include sArticleLogo();
+                    }
+                    .articleTitle{
+                        @include sArticleTitle();
+                    }
+                }
+            }
+        }
+        #other{
+            @include sOther();
+            .galleryTitle{
+                @include sGalleryTitle();
+            }
+            .galleryContainer{
+                @include sGalleryContainer();
+                .article{
+                    @include sArticle();
+                    .articleLogo{
+                        @include sArticleLogo();
+                    }
+                    .articleTitle{
+                        @include sArticleTitle();
+                    }
+                }
+            }
+        }
+        #services{
+            @include sServices();
+            .servicesTitle{
+                @include sServicesTitle();
+            }
+            .serviceContainer{
+                @include sServiceContainer();
+                .service{
+                    @include sService();
+                    .serviceTitle{
+                        @include sServiceTitle();
+                    }
+                }
+            }
+        }
+    }
+
+    #main2 {
+        @include sMain2();
+        .contactOne{
+            @include sContactOne();
+            .contactTitle{
+                @include sContactTitle();
+            }
+            .contactMenu{
+                @include sContactMenu();
+                .contactLi{
+                    @include sContactLi();
+                    .contactLogo{
+                        @include sContactLogo();
+                    }
+                }
+            }
+        }
+        .contactForm{
+            @include sContactForm();
+            .mainForm{
+                @include sMainForm();
+                .formLabel{
+                    @include sFormLabel();
+                }
+                .formInput{
+                    @include sFormInput();
+                }
+                .formSubmit{
+                    @include sFormSubmit();
+                }
+            }
+        }
+    }
+
+    .mainFooter{
+        @include sMainFooter();
+        .footerCopy{
+            @include sFooterCopy();
+        }
+        .footerBottomMenu{
+            @include sFooterBottomMenu();
+            .footerLi{
+                @include sFooterLi();
+                .footerA{
+                    @include sFooterA();
+                    .footerLogo{
+                        @include sFooterLogo();
+                    }
+                }
+            }
+        }
+    }
+}
+
+
