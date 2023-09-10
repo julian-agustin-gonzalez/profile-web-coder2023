@@ -65,29 +65,43 @@ body header nav .logo {
   margin: 10px;
 }
 body header nav .topMenu {
-  margin-right: 10px;
+  margin: 0 1.5rem 0 0;
   padding: 0;
-  margin: 0;
   display: flex;
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 580px) {
   body header nav .topMenu {
     display: none;
   }
 }
 body header nav .topMenu .navLi {
   float: left;
-  padding: 5px;
+  padding: 0 7px;
   list-style-type: none;
 }
 body header nav .topMenu .navLi .navLink {
   color: #000000;
+  position: relative;
   text-align: center;
   text-decoration: none;
   padding: 1px 1px;
   font-size: 1rem;
 }
-@media screen and (min-width: 521px) {
+body header nav .topMenu .navLi .navLink::before {
+  content: "";
+  width: 0;
+  height: 2.1px;
+  border-radius: 2px;
+  background-color: #232C33;
+  position: absolute;
+  bottom: -0.25rem;
+  left: 0;
+  transition: width 0.3s;
+}
+body header nav .topMenu .navLi .navLink:hover::before {
+  width: 100%;
+}
+@media screen and (min-width: 581px) {
   body header nav .ropdown {
     display: none;
   }
@@ -229,7 +243,7 @@ body #normalMain #gallery1 .galleryContainer .article {
   border-radius: 20px;
   border: 3px solid transparent;
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 580px) {
   body #normalMain #gallery1 .galleryContainer .article {
     margin: 1rem 0;
   }
@@ -239,7 +253,7 @@ body #normalMain #gallery1 .galleryContainer .article .articleLogo {
   margin-bottom: 1rem;
 }
 body #normalMain #gallery1 .galleryContainer .article .articleTitle {
-  font-size: 2rem;
+  font-size: 1rem;
   border-bottom: 2px solid #f44336;
 }
 body #normalMain #other {
@@ -280,7 +294,7 @@ body #normalMain #other .galleryContainer .article {
   border-radius: 20px;
   border: 3px solid transparent;
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 580px) {
   body #normalMain #other .galleryContainer .article {
     margin: 1rem 0;
   }
@@ -290,7 +304,7 @@ body #normalMain #other .galleryContainer .article .articleLogo {
   margin-bottom: 1rem;
 }
 body #normalMain #other .galleryContainer .article .articleTitle {
-  font-size: 2rem;
+  font-size: 1rem;
   border-bottom: 2px solid #f44336;
 }
 body #normalMain #services {
@@ -331,7 +345,7 @@ body #normalMain #services .serviceContainer .service {
   border: 3px solid transparent;
 }
 body #normalMain #services .serviceContainer .service .serviceTitle {
-  font-size: 3rem;
+  font-size: 2rem;
   border-bottom: 2px solid #f44336;
 }
 body #main2 {
@@ -341,7 +355,7 @@ body #main2 {
   justify-content: space-around;
   align-items: center;
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 580px) {
   body #main2 {
     flex-direction: column;
     padding: 3.5rem 0;
@@ -429,12 +443,12 @@ body .mainFooter {
   justify-content: space-between;
   align-self: flex-end;
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 580px) {
   body .mainFooter {
     height: 60px;
   }
 }
-@media screen and (min-width: 521px) {
+@media screen and (min-width: 581px) {
   body .mainFooter {
     height: 30px;
   }

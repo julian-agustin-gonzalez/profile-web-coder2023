@@ -22,16 +22,31 @@
 
 @mixin sNavLi(){
     float: left;
-    padding: 5px;
+    padding: 0 7px;
     list-style-type: none;
 }
 
 @mixin sNavLink(){
     color: #000000;
+    position: relative;
     text-align: center;
     text-decoration: none;
     padding: 1px 1px;
     font-size: 1rem;
+    &::before {
+        content: '';
+        width: 0;
+        height: 2.1px;
+        border-radius: 2px;
+        background-color: colors.$background;
+        position: absolute;
+        bottom: -.25rem;
+        left: 0;
+        transition: width .3s;
+    }
+    &:hover::before {
+        width: 100%;
+    }
 }
 
 @mixin sLogo(){
@@ -40,9 +55,8 @@
 }
 
 @mixin sTopMenu(){
-    margin-right: 10px;
+    margin: 0 1.5rem 0 0;
     padding: 0;
-    margin: 0;
     display: flex;
     @include mobile(){
         display: none;
