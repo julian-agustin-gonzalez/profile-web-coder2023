@@ -4,19 +4,14 @@
     display: flex;
     grid-area: footer;
     z-index: 1;
+    height: 4.5rem;
     text-align: center;
     background-color: colors.$footerBackground;
     box-shadow: 0px 5px 30px 1px colors.$footerNormalColor;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     align-self: flex-end;
-    @include mobile(){
-        height: 60px;
-    }
-    @include desktop(){
-        height: 30px;
-    }
 }
 
 @mixin sFooterCopy() {
@@ -46,6 +41,6 @@
 }
 
 @mixin sFooterLogo(){
-    height: 1.4rem;
-    width: 1.4rem;
+    height: 1.8rem;
+    width: 1.8rem;
 }

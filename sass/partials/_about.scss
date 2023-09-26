@@ -6,6 +6,17 @@
     text-align: center;
     align-items: center;
     justify-content: center;   
+    @include mobile(){
+        margin: 0 1rem;
+    }
+}
+
+@mixin sAboutImage() {
+    height: 7rem;
+    margin: 0 2rem;
+    @include mobile(){
+        display: none;
+    }
 }
 
 @mixin sAboutName(){

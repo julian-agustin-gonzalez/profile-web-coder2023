@@ -107,21 +107,6 @@ body {
                 }
             }
         }
-        .about {
-            @include sAbout();
-            .aboutName{
-                @include sAboutName();
-            }
-            .aboutInfo{
-                @include sAboutInfo();
-                #aboutText1{
-                    @include sAboutText1();
-                }
-                #aboutText2{
-                    @include sAboutText2();
-                }
-            }
-        }
         #gallery1{
             @include sGallery1();
             .galleryTitle{
@@ -225,6 +210,27 @@ body {
                     }
                 }
             }
+        }
+    }
+    #main3 {
+        @include sMain3();
+        .about {
+            @include sAbout();
+            .aboutName{
+                @include sAboutName();
+            }
+            .aboutInfo{
+                @include sAboutInfo();
+                #aboutText1{
+                    @include sAboutText1();
+                }
+                #aboutText2{
+                    @include sAboutText2();
+                }
+            }
+        }
+        .aboutImage {
+            @include sAboutImage();
         }
     }
 }

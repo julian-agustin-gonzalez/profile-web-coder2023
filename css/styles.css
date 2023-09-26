@@ -135,6 +135,7 @@ body #normalMain .profileInfo .profileName {
   font-size: 4rem;
   margin: 0;
   text-align: center;
+  border-bottom: 3px solid #f44336;
 }
 body #normalMain .skills {
   display: flex;
@@ -147,7 +148,6 @@ body #normalMain .skills {
 }
 body #normalMain .skills .skillsTitle {
   margin: 1.3rem 0;
-  border-bottom: 3px solid #f44336;
 }
 body #normalMain .skills .skillsContainer {
   width: 18rem;
@@ -175,36 +175,6 @@ body #normalMain .skills .skillsContainer .html {
   animation: transitionHtml 2.5s;
   background-color: #f44336;
   width: 50%;
-}
-body #normalMain .about {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
-body #normalMain .about .aboutName {
-  font-size: 3rem;
-  max-width: 470px;
-  min-width: 0;
-  margin: 1.5rem 0;
-}
-body #normalMain .about .aboutInfo {
-  font-size: 1.5rem;
-  padding: 10px;
-  max-width: 550px;
-  min-width: 0;
-  background: linear-gradient(#1a1e22, #1a1e22) padding-box, linear-gradient(#94DDBC 5%, #188FA7) border-box;
-  border-radius: 20px;
-  border: 3px solid transparent;
-}
-body #normalMain .about .aboutInfo #aboutText1::after {
-  content: "\a";
-  white-space: pre;
-}
-body #normalMain .about .aboutInfo #aboutText2::before {
-  content: "\a";
-  white-space: pre;
 }
 body #normalMain #gallery1 {
   display: flex;
@@ -242,6 +212,7 @@ body #normalMain #gallery1 .galleryContainer .article {
   background: linear-gradient(#232C33, #232C33) padding-box, linear-gradient(#94DDBC 5%, #188FA7) border-box;
   border-radius: 20px;
   border: 3px solid transparent;
+  margin: 5px 0;
 }
 @media screen and (max-width: 580px) {
   body #normalMain #gallery1 .galleryContainer .article {
@@ -293,6 +264,7 @@ body #normalMain #other .galleryContainer .article {
   background: linear-gradient(#232C33, #232C33) padding-box, linear-gradient(#94DDBC 5%, #188FA7) border-box;
   border-radius: 20px;
   border: 3px solid transparent;
+  margin: 5px 0;
 }
 @media screen and (max-width: 580px) {
   body #normalMain #other .galleryContainer .article {
@@ -323,19 +295,27 @@ body #normalMain #services .servicesTitle {
 }
 body #normalMain #services .serviceContainer {
   display: flex;
-  flex-direction: column;
-  width: 25rem;
-  margin-bottom: 3rem;
+  flex-direction: row;
+  max-width: 47rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
   height: auto;
   display: flex;
   align-items: center;
   background-color: #1a1e22;
   border-radius: 20px;
 }
+@media screen and (max-width: 580px) {
+  body #normalMain #services .serviceContainer {
+    max-width: 22rem;
+  }
+}
 body #normalMain #services .serviceContainer .service {
   height: 20rem;
   width: 20rem;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   margin: 5rem 0;
@@ -410,7 +390,14 @@ body #main2 .contactForm .mainForm {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 12rem;
+  border: 3px solid rgba(255, 255, 255, 0.4392156863);
+  padding: 1rem;
+  border-radius: 20px;
+}
+@media screen and (max-width: 580px) {
+  body #main2 .contactForm .mainForm {
+    margin-top: 2rem;
+  }
 }
 body #main2 .contactForm .mainForm .formLabel {
   text-align: center;
@@ -419,7 +406,6 @@ body #main2 .contactForm .mainForm .formInput {
   background-color: #1a1e22;
   color: #FFFFFF;
   border-radius: 5px;
-  width: 12rem;
 }
 body #main2 .contactForm .mainForm .formSubmit {
   margin-top: 1rem;
@@ -433,23 +419,14 @@ body .mainFooter {
   display: flex;
   grid-area: footer;
   z-index: 1;
+  height: 4.5rem;
   text-align: center;
   background-color: #010a18;
   box-shadow: 0px 5px 30px 1px #808080;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   align-self: flex-end;
-}
-@media screen and (max-width: 580px) {
-  body .mainFooter {
-    height: 60px;
-  }
-}
-@media screen and (min-width: 581px) {
-  body .mainFooter {
-    height: 30px;
-  }
 }
 body .mainFooter .footerCopy {
   color: #808080;
@@ -474,8 +451,61 @@ body .mainFooter .footerBottomMenu .footerLi .footerA {
   display: flex;
 }
 body .mainFooter .footerBottomMenu .footerLi .footerA .footerLogo {
-  height: 1.4rem;
-  width: 1.4rem;
+  height: 1.8rem;
+  width: 1.8rem;
+}
+body #main3 {
+  display: flex;
+  flex-direction: row;
+  grid-area: main;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+}
+body #main3 .about {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 580px) {
+  body #main3 .about {
+    margin: 0 1rem;
+  }
+}
+body #main3 .about .aboutName {
+  font-size: 3rem;
+  max-width: 470px;
+  min-width: 0;
+  margin: 1.5rem 0;
+}
+body #main3 .about .aboutInfo {
+  font-size: 1.5rem;
+  padding: 10px;
+  max-width: 550px;
+  min-width: 0;
+  background: linear-gradient(#1a1e22, #1a1e22) padding-box, linear-gradient(#94DDBC 5%, #188FA7) border-box;
+  border-radius: 20px;
+  border: 3px solid transparent;
+}
+body #main3 .about .aboutInfo #aboutText1::after {
+  content: "\a";
+  white-space: pre;
+}
+body #main3 .about .aboutInfo #aboutText2::before {
+  content: "\a";
+  white-space: pre;
+}
+body #main3 .aboutImage {
+  height: 7rem;
+  margin: 0 2rem;
+}
+@media screen and (max-width: 580px) {
+  body #main3 .aboutImage {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

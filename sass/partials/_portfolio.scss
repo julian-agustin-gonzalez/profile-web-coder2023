@@ -50,6 +50,7 @@
     linear-gradient( colors.$linear1 5%, colors.$linear2) border-box;
     border-radius: 20px;
     border: 3px solid transparent;
+    margin: 5px 0;
     @include mobile(){
         margin: 1rem 0;
     }
